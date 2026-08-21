@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="颜色挑战：在公司里寻找颜色，记录身边的有趣瞬间。" />
+    <link rel="icon" href="logo.png" />
+    <title>颜色挑战 · 我眼中的同花顺</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="home-page">
+    <div class="page-noise" aria-hidden="true"></div>
+    <header class="site-header container">
+      <a class="brand" href="index.html" aria-label="返回我眼中的同花顺首页">
+        <span class="company-logo-wrap"><img class="company-logo" src="logo.png" alt="同花顺" /></span>
+        <span>我眼中的同花顺</span>
+      </a>
+      <a class="header-link" href="#how-it-works">怎么玩 <span>↘</span></a>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> THS OFFICE COLOR CHALLENGE</p>
+          <h1>在日常里，<br /><em>找到一种颜色。</em></h1>
+          <p class="hero-intro">定下颜色，带着好奇心出发。<br />看看办公室里藏着多少惊喜。</p>
+          <a class="primary-button" href="#palette">开始探索 <span>→</span></a>
+        </div>
+        <div class="hero-art" aria-label="六种挑战颜色">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="color-sticker sticker-red">红</div>
+          <div class="color-sticker sticker-yellow">黄</div>
+          <div class="color-sticker sticker-blue">蓝</div>
+          <div class="color-sticker sticker-green">绿</div>
+          <div class="color-sticker sticker-white">白</div>
+          <div class="color-sticker sticker-black">黑</div>
+          <span class="art-caption">six colors<br />one office</span>
+        </div>
+      </section>
+
+      <section class="palette-section container" id="palette">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">CHOOSE YOUR DUO</p>
+            <h2>选择一组颜色</h2>
+          </div>
+          <p class="section-note">点击色块，进入对应的双九宫格。</p>
+        </div>
+        <div class="palette-grid" id="palette-grid"></div>
+      </section>
+
+      <section class="how-section container" id="how-it-works">
+        <div class="how-card">
+          <span class="how-number">01</span>
+          <div><h3>定下颜色</h3><p>从三组颜色里，选一组今天的观察任务。</p></div>
+        </div>
+        <div class="how-card">
+          <span class="how-number">02</span>
+          <div><h3>在公司里寻找</h3><p>桌面、走廊、茶水间，每个角落都有答案。</p></div>
+        </div>
+        <div class="how-card">
+          <span class="how-number">03</span>
+          <div><h3>分享你的发现</h3><p>用 9 张照片，把这一组颜色留在这里。</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <span>COLOR CHALLENGE / 同花顺</span>
+      <span>made with curiosity</span>
+    </footer>
+
+    <script src="data/colors.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="颜色挑战 · 双九宫格照片墙" />
+    <link rel="icon" href="logo.png" />
+    <title>颜色挑战 · 照片墙</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="challenge-page">
+    <div class="page-noise" aria-hidden="true"></div>
+    <header class="site-header container">
+      <a class="brand" href="index.html" aria-label="返回我眼中的同花顺首页">
+        <span class="company-logo-wrap"><img class="company-logo" src="logo.png" alt="同花顺" /></span>
+        <span>我眼中的同花顺</span>
+      </a>
+      <a class="back-link" href="index.html">← 返回调色盘</a>
+    </header>
+
+    <main id="challenge-root" class="challenge-root container" aria-live="polite"></main>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="查看大图" hidden>
+      <button class="lightbox-close" type="button" aria-label="关闭">×</button>
+      <img id="lightbox-image" src="" alt="" />
+      <p id="lightbox-caption"></p>
+    </div>
+
+    <script src="data/colors.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
