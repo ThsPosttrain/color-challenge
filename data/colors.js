@@ -10,7 +10,7 @@ window.COLOR_CHALLENGE_DATA = {
   ],
   photographers: {
     black: ["康祉祺（基模后训练组）", "金啸天（XX组）"],
-    white: ["张凌宇（XX组）", "赵春翔（xx组）"],
+    white: ["张凌宇（基金产运组）", "赵春翔（xx组）"],
     red: ["王浩杨（xx组）", "郑名杰（xx组）"],
     green: ["闫家湖（xx组）", "彭奥鹏（xx组）"],
     blue: ["徐威（xx组）", "李震乾（xx组）"],

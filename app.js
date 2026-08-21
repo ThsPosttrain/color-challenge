@@ -19,6 +19,13 @@
     return encodeURI(relativePath);
   }
 
+  function thumbnailPath(filename) {
+    if (!filename) return "";
+    const slash = filename.lastIndexOf("/");
+    if (slash === -1) return `thumb/${filename}`;
+    return `${filename.slice(0, slash + 1)}thumb/${filename.slice(slash + 1)}`;
+  }
+
   function renderPalette() {
     const root = document.querySelector("#palette-grid");
     if (!root) return;
@@ -57,8 +64,9 @@
     const credit = photographers.length ? `照片主要由 ${photographers.join(" 和 ")} 拍摄。` : "照片拍摄者待补充。";
     const tiles = Array.from({ length: 9 }, (_, index) => {
       const filename = images[index];
-      const src = filename ? imagePath(filename) : placeholder(color.id, index + 1);
-      return `<button class="photo-tile" type="button" data-src="${src}" data-alt="${color.name}色照片 ${index + 1}" style="--delay:${index * 35}ms"><span class="photo-index">${String(index + 1).padStart(2, "0")}</span><img src="${src}" alt="${color.name}色照片 ${index + 1}" loading="lazy" /><span class="photo-overlay">查看大图 ↗</span></button>`;
+      const fullSrc = filename ? imagePath(filename) : placeholder(color.id, index + 1);
+      const thumbnailSrc = filename ? imagePath(thumbnailPath(filename)) : fullSrc;
+      return `<button class="photo-tile" type="button" data-src="${thumbnailSrc}" data-full="${fullSrc}" data-alt="${color.name}色照片 ${index + 1}" style="--delay:${index * 35}ms"><span class="photo-index">${String(index + 1).padStart(2, "0")}</span><img src="${thumbnailSrc}" alt="${color.name}色照片 ${index + 1}" loading="lazy" decoding="async" /><span class="photo-overlay">查看大图 ↗</span></button>`;
     }).join("");
     return `<article class="color-wall color-wall-${side === 0 ? "left" : "right"}" style="--accent:${color.hex}"><header class="color-wall-heading"><div class="color-title"><span class="color-dot"></span><h2>${color.name}</h2></div><span>09 PHOTOS</span></header><p class="color-credit">${credit}</p><div class="photo-grid">${tiles}</div></article>`;
   }
@@ -67,7 +75,7 @@
     const lightbox = document.querySelector("#lightbox");
     const image = document.querySelector("#lightbox-image");
     const caption = document.querySelector("#lightbox-caption");
-    image.src = tile.dataset.src;
+    image.src = tile.dataset.full || tile.dataset.src;
     image.alt = tile.dataset.alt;
     caption.textContent = tile.dataset.alt;
     lightbox.hidden = false;

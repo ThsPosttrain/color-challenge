@@ -8,6 +8,16 @@
 
 每种颜色最多展示 9 张图片。不足 9 张时，网站会自动显示彩色占位卡片。
 
+## 图片加载策略
+
+九宫格默认读取 `data/颜色/thumb/颜色1.jpg` 缩略图，点击照片后才读取 `data/颜色/颜色1.jpg` 原图。替换原图后，在项目根目录运行：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\tools\generate-thumbnails.ps1
+```
+
+脚本会重新生成缩略图，不会修改原图。
+
 ## 修改拍摄者署名
 
 在 `data/colors.js` 的 `photographers` 配置中修改每种颜色对应的两位拍摄者，页面会在颜色标题下方显示“照片主要由……拍摄”。
