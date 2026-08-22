@@ -9,12 +9,12 @@ window.COLOR_CHALLENGE_DATA = {
     { id: "blue-yellow", label: "蓝 / 黄", left: { id: "blue", name: "蓝", hex: "#3d73e8" }, right: { id: "yellow", name: "黄", hex: "#f7c843" } }
   ],
   photographers: {
-    black: ["康祉祺（基模后训练组）", "金啸天（XX组）"],
-    white: ["张凌宇（基金产运组）", "赵春翔（xx组）"],
-    red: ["王浩杨（xx组）", "郑名杰（xx组）"],
-    green: ["闫家湖（xx组）", "彭奥鹏（xx组）"],
-    blue: ["徐威（xx组）", "李震乾（xx组）"],
-    yellow: ["黄梓钧（xx组）", "王卓然（xx组）"]
+    black: ["康祉祺（基模后训练组）", "金啸天（NLP机器人部门）"],
+    white: ["张凌宇（基金产运组）", "赵春翔（b2c产品部门）"],
+    red: ["王浩杨（手机客户端开发）", "郑名杰（nlp机器人部门）"],
+    green: ["闫家溯（资讯部门）", "彭奥鹏（数据抓取组）"],
+    blue: ["徐威（AIGC算法部）", "李震乾（基金产运组）"],
+    yellow: ["黄梓钧（语音部门）", "王卓然（B2C部门）"]
   },
   images: {
     black: [
